@@ -10,15 +10,12 @@
 
     @page {
       size: A4;
-      margin: 10mm 12mm;
+      margin: 6mm 12mm;
     }
 
     @media print {
       body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #fff; }
-      .resume { box-shadow: none; margin: 0; padding: 20px 24px; }
-      .page-break { page-break-before: always; margin: 0; padding: 0; }
-      .company { page-break-inside: avoid; }
-      .project { page-break-inside: avoid; }
+      .resume { box-shadow: none; margin: 0; padding: 12px 24px; }
     }
 
     /* ========== 全局样式 ========== */
@@ -35,7 +32,7 @@
       margin: 20px auto;
       background: #ffffff;
       box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-      padding: 28px 30px;
+      padding: 28px 30px 16px 30px;
     }
 
     a { color: #3182ce; text-decoration: none; }
@@ -306,18 +303,19 @@
     <!-- ===== 头部 ===== -->
     <div class="header">
       <h1>殷 丹 玲</h1>
-      <div class="subtitle">前端工程师 ｜ 6 年经验</div>
+      <div class="subtitle">前端工程师 ｜ 6 年经验 ｜ AI 应用与模型评测</div>
       <div class="contact">
         <span>15012870970</span>
         <span>y370900736@163.com</span>
-        <span>深圳</span>
+        <!-- <span>杭州</span> -->
         <span>CET6 / 英语流利</span>
+        <span><a href="https://github.com/yuebanyin/engineering-notes" target="_blank">GitHub 技术文档</a></span>
       </div>
     </div>
 
     <!-- ===== 个人简介 ===== -->
     <div class="summary">
-      6 年前端开发经验，擅长 React 生态与跨端开发。具备 AI 对话平台、国际化 SaaS、前端 SDK、电商支付等多类型项目的独立架构设计与从 0 到 1 交付能力。主动发现问题并推动优化，乐于在团队中分享技术方案、沉淀通用能力，适应创业节奏与快速迭代的工作方式。
+      6 年前端开发经验，擅长 React 生态与跨端开发，具备 AI 对话平台、国际化 SaaS、前端 SDK 等多类型项目的独立架构与从 0 到 1 交付能力。当前 assign 于微软 CoreAI Post-Training 团队，近一年主导多模型评测流程与 Benchmark 扩展，建立 Build + Sanity Check 双门禁交付机制；在 AI 前端方向兼具产品交互落地能力与 AI 质量体系建设能力。
     </div>
 
     <!-- ===== 专业技能 ===== -->
@@ -325,11 +323,11 @@
     <div class="skills-grid">
       <div class="skill-item"><strong>前端框架：</strong>熟练 React（Fiber 架构 / 性能优化）；熟悉 Vue 全家桶生态，可快速承接或重构 Vue 项目。</div>
       <div class="skill-item"><strong>小程序开发：</strong>熟练使用 Taro + Tailwind CSS 实现多端适配，掌握小程序全流程开发及性能优化实践。</div>
-      <div class="skill-item"><strong>工程化与构建：</strong>熟练掌握 Webpack / Vite / Rollup 构建优化，了解 Node.js 与 npm / yarn / pnpm。</div>
-      <div class="skill-item"><strong>低代码平台：</strong>熟练使用 Lakeshore 等工具，具备搭建小游戏、动画、H5 页面等可视化能力。</div>
+      <div class="skill-item"><strong>工程化与构建：</strong>熟练掌握 Webpack / Vite / Rollup 构建优化，了解 Node.js 与 npm / yarn / pnpm；具备低代码平台搭建 H5 页面与动画的可视化开发经验。</div>
       <div class="skill-item"><strong>自动化测试：</strong>掌握 Cypress 端到端测试及 Jest 单元测试，覆盖核心业务流程。</div>
       <div class="skill-item"><strong>GraphQL：</strong>熟悉 Apollo + GraphQL 技术栈，参与 Schema 设计及 Fragment 复用优化。</div>
       <div class="skill-item"><strong>CI/CD：</strong>熟悉 Git Flow 工作流，主导 Code Review 和 CI/CD 自动构建部署流程设计。</div>
+      <div class="skill-item"><strong>AI：</strong>参与 GPT / Claude / Gemini 多模型多维评估，熟悉 Seed Case 分析与 Sub Case 扩展，能够设计评分 Rubric、评测 Prompt 与质量检查 SOP。</div>
     </div>
 
     <!-- ===== 工作经历与项目经验 ===== -->
@@ -348,11 +346,11 @@
         <div class="project-title">Sales Genie AI 销售助手平台</div>
         <div class="project-desc">企业级 AI 驱动销售工具，集成 Dify 大语言模型、微软 AAD 认证、实时流式对话，支持多语言/多端/知识库联动。</div>
         <span class="project-tech">React 18 + Vite 5 + Ant Design X + Axios + i18next</span>
-        <span class="project-period-inline">2025.10 - 至今</span>
+        <span class="project-period-inline">2025.10 - 2026.03</span>
 
         <div class="label">项目职责</div>
         <ul class="project-list">
-          <li>独立完成从 0 到 1 的全栈架构设计与实现，涵盖路由、认证、数据流管理到 UI 层，通过 Context API 实现跨层级状态共享。</li>
+          <li>独立完成从 0 到 1 的前端架构设计与实现，涵盖路由、认证、数据流管理到 UI 层，通过 Context API 实现跨层级状态共享。</li>
           <li>主导 SSO 登录、流式对话、会话管理、知识库控制等核心功能的需求分析、技术方案设计和代码实现。</li>
           <li>搭建 dev/test/prod 三环境管理体系，配置 Vite 环境变量、API 代理、请求拦截与错误处理，支持 IIS 部署。</li>
         </ul>
@@ -361,14 +359,36 @@
           <li>基于 AbortController 实现 SSE 流式请求中断机制，避免无效数据传输，有效降低服务端资源消耗。</li>
           <li>设计 Context + Ref 混合状态管理架构，解决流式场景下频繁 re-render 问题，渲染性能显著提升。</li>
           <li>落地 MSAL 企业 SSO + Crypto Polyfill 完整方案，实现微软 AAD 免密登录全流程。</li>
-          <li>基于 Ant Design X 实现流式对话引擎，优化打字机效果渲染节奏与滚动体验。</li>
-          <li>实现会话智能分组与多端响应式布局，适配桌面端与移动端不同场景。</li>
+          <li>基于 Ant Design X 实现流式对话引擎，优化打字机效果渲染与响应式布局，适配桌面端与移动端。</li>
         </ul>
       </div>
 
       <hr class="divider">
 
       <!-- 项目1-2 -->
+      <div class="project">
+        <div class="project-title">AI 模型评测与 Benchmark 扩展</div>
+        <div class="project-desc">主导多模型评测框架建设与 Benchmark 案例扩展，覆盖代码生成、对话质量、安全性等五大维度，建立标准化交付验证闭环。</div>
+        <span class="project-tech">Python + Prompt Engineering + Terminal-Bench2 + 模型评测体系</span>
+        <span class="project-period-inline">2025.10 - 至今</span>
+
+        <div class="label">项目职责</div>
+        <ul class="project-list">
+          <li>基于统一 Rubric 完成 GPT / Claude / Gemini 等跨模型对比评测，输出多维度排名报告与优化建议。</li>
+          <li>按 Seed Case 深度分析结果设计同层级 Sub Cases，通过 Build / Sanity Check 双门禁验证有效交付。</li>
+          <li>设计评测 Prompt 与标注规范，提升多轮评估的一致性与可复用性。</li>
+        </ul>
+        <div class="label">项目亮点</div>
+        <ul class="project-list">
+          <li>统一评测 Prompt 与评分口径，降低标注波动，多维度评分结果一致性显著提升。</li>
+          <li>参与 Benchmark 扩展实践，深入理解 AI Agent 代码能力的标准化评估方法论。</li>
+          <li>沉淀评测 SOP 与质量门禁清单，支持团队稳定复用与新成员快速接入。</li>
+        </ul>
+      </div>
+
+      <hr class="divider">
+
+      <!-- 项目1-3 -->
       <div class="project">
         <div class="project-title">Expedia Hotels.com（SaaS）</div>
         <div class="project-desc">Expedia 集团旗下全球酒店预订服务，提升预订流程稳定性、扩展性和国际化能力。</div>
@@ -385,14 +405,9 @@
           <li>Apollo Fragment 模块化 + Query Batching，首页渲染时间平均下降约 30%。</li>
           <li>搭建 Cypress 自动化测试体系，覆盖预订核心路径，降低上线回归缺陷率。</li>
           <li>主导 GraphQL Schema 统一设计，聚合多来源后端数据，提升可维护性。</li>
-          <li>撰写 Fragment 复用规范文档，推动团队协作标准化。</li>
-          <li>实现语言切换与多币种格式化，保障海外多地业务顺利落地。</li>
         </ul>
       </div>
     </div>
-
-    <!-- 第二页开始 -->
-    <div class="page-break"></div>
 
     <!-- 公司2 -->
     <div class="company">
@@ -406,7 +421,7 @@
       <div class="project">
         <div class="project-title">埋点监控 SDK</div>
         <div class="project-desc">轻量级前端埋点监控上报 SDK，支持 PV/UV 自动收集、JS 错误和性能指标监控。</div>
-        <span class="project-tech">React + TypeScript + Rollup + ES6+</span>
+        <span class="project-tech">React + TypeScript + Rollup + ES6</span>
         <span class="project-period-inline">2024.05 - 2024.09</span>
 
         <div class="label">项目职责</div>
@@ -459,22 +474,18 @@
       <div class="project">
         <div class="project-title">如意游戏平台</div>
         <div class="project-desc">海外游戏平台，集成多款热门游戏，提供充值、提现、排行榜、任务系统，面向海外市场的跨终端游戏与电商消费体验。</div>
-        <span class="project-tech">React + Hooks + JavaScript + MobX + Webpack + Tailwind</span>
+        <span class="project-tech">React + Hooks + MobX + Webpack + Tailwind</span>
         <span class="project-period-inline">2022.05 - 2023.01</span>
 
         <div class="label">项目职责</div>
         <ul class="project-list">
-          <li>主导用户中心、虚拟币充值、排行榜等核心模块开发，完成支付流程接入与动画效果实现。</li>
-          <li>主导前端性能优化、组件架构重构和通用模块沉淀。</li>
-          <li>参与打包构建优化与日志监控接入，保障平台健壮性。</li>
+          <li>主导用户中心、虚拟币充值、排行榜等核心模块开发与前端性能优化。</li>
         </ul>
         <div class="label">项目亮点</div>
         <ul class="project-list">
           <li>Webpack 优化（splitChunks / Tree Shaking / gzip + CDN），打包体积减少 42%，首屏缩短近 2s。</li>
-          <li>大文件切片上传与断点续传机制，显著提升上传体验与文件处理稳定性。</li>
           <li>SVG + Canvas 高帧率动画模块（requestAnimationFrame），低端设备 55fps+ 渲染。</li>
-          <li>Sentry 异常监控 + 自研日志系统，支撑问题定位与用户行为分析。</li>
-          <li>WebSocket 长连接实时通信，结合玩法规则动态渲染。</li>
+          <li>Sentry 异常监控 + WebSocket 实时通信，支撑问题定位与游戏互动体验。</li>
         </ul>
       </div>
     </div>
@@ -485,11 +496,6 @@
       <span class="edu-school">南昌大学共青学院</span>
       <span class="edu-major">电子信息工程专业</span>
       <span class="edu-detail">2016.09 - 2020.07 ｜ 全日制本科</span>
-    </div>
-    <div class="tags" style="margin-top:6px;">
-      <span class="tag">CET6</span>
-      <span class="tag">英语听说读写流利</span>
-      <span class="tag">全日制本科</span>
     </div>
 
   </div>
