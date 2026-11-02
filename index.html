@@ -1,503 +1,790 @@
-<!DOCTYPE html>
+<!doctype html>
+<!-- 基于已核实工作经历与个人项目整理的通用主简历；非岗位定制版 -->
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>殷丹玲 - 前端工程师简历</title>
-  <style>
-    /* ========== 基础重置与打印优化 ========== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>殷丹玲 - 软件研发与 AI 工程</title>
+    <style>
+      :root {
+        --ink: #172b3a;
+        --body: #314556;
+        --muted: #647789;
+        --line: #dce5eb;
+        --accent: #176b70;
+        --accent-dark: #124e56;
+        --accent-soft: #eaf4f2;
+        --paper: #fff;
+      }
 
-    @page {
-      size: A4;
-      margin: 6mm 12mm;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    @media print {
-      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: #fff; }
-      .resume { box-shadow: none; margin: 0; padding: 12px 24px; }
-    }
+      @page {
+        size: A4;
+        margin: 9mm 11mm;
+      }
 
-    /* ========== 全局样式 ========== */
-    body {
-      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-      font-size: 13px;
-      line-height: 1.6;
-      color: #2d3748;
-      background: #f0f2f5;
-    }
+      body {
+        background: #e9eef1;
+        color: var(--body);
+        font-family:
+          'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 11px;
+        line-height: 1.55;
+      }
 
-    .resume {
-      max-width: 210mm;
-      margin: 20px auto;
-      background: #ffffff;
-      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-      padding: 28px 30px 16px 30px;
-    }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    a { color: #3182ce; text-decoration: none; }
+      .resume {
+        width: 210mm;
+        margin: 18px auto;
+      }
 
-    /* ========== 头部区域 ========== */
-    .header {
-      text-align: center;
-      padding-bottom: 14px;
-      border-bottom: 2px solid #3182ce;
-      margin-bottom: 14px;
-    }
+      .page {
+        position: relative;
+        min-height: 279mm;
+        padding: 11mm 13mm 13mm;
+        margin-bottom: 18px;
+        background: var(--paper);
+        box-shadow: 0 8px 28px rgba(23, 43, 58, 0.1);
+      }
 
-    .header h1 {
-      font-size: 26px;
-      font-weight: 700;
-      color: #1a202c;
-      letter-spacing: 4px;
-      margin-bottom: 4px;
-    }
+      .page-break {
+        break-after: page;
+        page-break-after: always;
+      }
 
-    .header .subtitle {
-      font-size: 14px;
-      color: #3182ce;
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+      }
 
-    .header .contact {
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      gap: 4px 14px;
-      font-size: 11.5px;
-      color: #2d3748;
-    }
+      .header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        gap: 14px;
+        padding-bottom: 9px;
+        border-bottom: 2px solid var(--accent);
+      }
 
-    .header .contact span::before {
-      content: "";
-      display: inline-block;
-      width: 3px;
-      height: 3px;
-      background: #3182ce;
-      border-radius: 50%;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
+      h1 {
+        margin-top: 3px;
+        color: var(--ink);
+        font-size: 29px;
+        font-weight: 750;
+        letter-spacing: 4px;
+        line-height: 1.15;
+      }
 
-    /* ========== 个人简介 ========== */
-    .summary {
-      background: #f0f5fa;
-      border-left: 3px solid #2b6cb0;
-      padding: 8px 14px;
-      margin-bottom: 14px;
-      font-size: 12.5px;
-      color: #2d3748;
-      line-height: 1.6;
-      border-radius: 0 4px 4px 0;
-    }
+      .headline {
+        margin-top: 6px;
+        color: var(--accent-dark);
+        font-size: 14px;
+        font-weight: 700;
+      }
 
-    /* ========== 区块标题 ========== */
-    .section-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1a202c;
-      padding-bottom: 4px;
-      border-bottom: 1.5px solid #e2e8f0;
-      margin-bottom: 10px;
-      margin-top: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+      .header-note {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 9.5px;
+      }
 
-    .section-title::before {
-      content: "";
-      display: inline-block;
-      width: 4px;
-      height: 16px;
-      background: #3182ce;
-      border-radius: 2px;
-    }
+      .contact {
+        display: grid;
+        gap: 4px;
+        justify-items: end;
+        color: var(--body);
+        font-size: 9px;
+        white-space: nowrap;
+      }
 
-    /* ========== 技能标签 ========== */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3px;
-    }
+      .contact a {
+        color: var(--accent-dark);
+        font-weight: 650;
+      }
 
-    .skill-item {
-      font-size: 12px;
-      line-height: 1.55;
-      color: #2d3748;
-      padding-left: 14px;
-      position: relative;
-    }
+      .summary {
+        padding: 9px 11px;
+        margin-top: 9px;
+        border-left: 3px solid var(--accent);
+        background: #f3f7f7;
+        font-size: 11px;
+        line-height: 1.68;
+      }
 
-    .skill-item::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 5px;
-      height: 5px;
-      background: #3182ce;
-      border-radius: 50%;
-    }
+      strong {
+        color: var(--ink);
+        font-weight: 700;
+      }
 
-    .skill-item strong {
-      color: #2d3748;
-      font-weight: 600;
-    }
+      .proof-points {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px;
+        margin-top: 7px;
+      }
 
-    /* ========== 公司区块 ========== */
-    .company {
-      margin-bottom: 12px;
-    }
+      .proof {
+        padding: 6px 8px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+      }
 
-    .company-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 2px;
-      flex-wrap: wrap;
-    }
+      .proof-value {
+        color: var(--accent-dark);
+        font-size: 14px;
+        font-weight: 750;
+        line-height: 1.2;
+      }
 
-    .company-name {
-      font-size: 14px;
-      font-weight: 700;
-      color: #1a202c;
-    }
+      .proof-label {
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 8px;
+      }
 
-    .company-role {
-      font-size: 13px;
-      color: #3182ce;
-      font-weight: 600;
-    }
+      .section {
+        margin-top: 12px;
+      }
 
-    .company-period {
-      font-size: 12px;
-      color: #718096;
-      font-style: italic;
-      white-space: nowrap;
-    }
+      .section-heading {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+        padding-bottom: 4px;
+        margin-bottom: 6px;
+        border-bottom: 1px solid var(--line);
+      }
 
-    /* ========== 项目区块 ========== */
-    .project {
-      margin-top: 6px;
-      margin-bottom: 8px;
-      padding-left: 12px;
-      border-left: 2px solid #e2e8f0;
-    }
+      .section-heading h2 {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--ink);
+        font-size: 12.5px;
+        font-weight: 750;
+      }
 
-    .project-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #2d3748;
-      margin-bottom: 2px;
-    }
+      .section-heading h2::before {
+        width: 3px;
+        height: 12px;
+        border-radius: 2px;
+        background: var(--accent);
+        content: '';
+      }
 
-    .project-desc {
-      font-size: 11.5px;
-      color: #4a5568;
-      line-height: 1.5;
-      margin-bottom: 4px;
-    }
+      .section-kicker {
+        color: var(--muted);
+        font-size: 9px;
+      }
 
-    .project-tech {
-      display: inline-block;
-      font-size: 11px;
-      color: #2b6cb0;
-      background: #dbeafe;
-      padding: 1px 8px;
-      border-radius: 3px;
-      margin-bottom: 5px;
-      font-weight: 500;
-    }
+      .capability-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
 
-    .project-period-inline {
-      font-size: 11px;
-      color: #718096;
-      margin-left: 6px;
-    }
+      .capability {
+        padding: 8px 9px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+      }
 
-    .label {
-      font-size: 12px;
-      font-weight: 700;
-      color: #2d3748;
-      margin-top: 5px;
-      margin-bottom: 2px;
-    }
+      .capability h3 {
+        margin-bottom: 2px;
+        color: var(--accent-dark);
+        font-size: 10px;
+      }
 
-    .project-list {
-      list-style: none;
-      padding: 0;
-    }
+      .capability p {
+        font-size: 10px;
+        line-height: 1.55;
+      }
 
-    .project-list li {
-      font-size: 12px;
-      line-height: 1.55;
-      color: #2d3748;
-      padding-left: 14px;
-      position: relative;
-      margin-bottom: 1px;
-    }
+      .company {
+        margin-top: 10px;
+      }
 
-    .project-list li::before {
-      content: "▸";
-      position: absolute;
-      left: 0;
-      color: #3182ce;
-      font-size: 11px;
-    }
+      .company-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: baseline;
+        gap: 2px 10px;
+      }
 
-    /* ========== 教育经历 ========== */
-    .edu {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4px;
-    }
+      .company-name {
+        color: var(--ink);
+        font-size: 11.5px;
+        font-weight: 750;
+      }
 
-    .edu-school {
-      font-size: 13px;
-      font-weight: 700;
-      color: #2d3748;
-    }
+      .company-role {
+        color: var(--accent-dark);
+        font-size: 9.5px;
+        font-weight: 650;
+      }
 
-    .edu-major {
-      font-size: 12.5px;
-      color: #4a5568;
-    }
+      .company-date {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        color: var(--muted);
+        font-size: 8.4px;
+        white-space: nowrap;
+      }
 
-    .edu-detail {
-      font-size: 11.5px;
-      color: #718096;
-      font-style: italic;
-    }
+      .timeline {
+        padding-left: 8px;
+        border-left: 1px solid var(--line);
+        margin: 4px 0 0 2px;
+      }
 
-    .tags {
-      display: flex;
-      gap: 6px;
-      margin-top: 4px;
-      flex-wrap: wrap;
-    }
+      .timeline-item {
+        position: relative;
+        padding: 0 0 5px 8px;
+      }
 
-    .tag {
-      font-size: 11px;
-      background: #dbeafe;
-      color: #2b6cb0;
-      padding: 1px 8px;
-      border-radius: 3px;
-      font-weight: 500;
-    }
+      .timeline-item::before {
+        position: absolute;
+        top: 4px;
+        left: -12px;
+        width: 6px;
+        height: 6px;
+        border: 1.5px solid var(--accent);
+        border-radius: 50%;
+        background: #fff;
+        content: '';
+      }
 
-    /* ========== 分隔线 ========== */
-    .divider {
-      border: none;
-      border-top: 1px dashed #e2e8f0;
-      margin: 8px 0;
-    }
-  </style>
-</head>
-<body>
-  <div class="resume">
+      .timeline-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 8px;
+      }
 
-    <!-- ===== 头部 ===== -->
-    <div class="header">
-      <h1>殷 丹 玲</h1>
-      <div class="subtitle">前端工程师 ｜ 6 年经验 ｜ AI 应用与模型评测</div>
-      <div class="contact">
-        <span>15012870970</span>
-        <span>y370900736@163.com</span>
-        <!-- <span>杭州</span> -->
-        <span>CET6 / 英语流利</span>
-        <span><a href="https://github.com/yuebanyin/engineering-notes" target="_blank">GitHub 技术文档</a></span>
-      </div>
-    </div>
+      .timeline-head h3 {
+        color: var(--ink);
+        font-size: 10px;
+        font-weight: 700;
+      }
 
-    <!-- ===== 个人简介 ===== -->
-    <div class="summary">
-      6 年前端开发经验，擅长 React 生态与跨端开发，具备 AI 对话平台、国际化 SaaS、前端 SDK 等多类型项目的独立架构与从 0 到 1 交付能力。当前 assign 于微软 CoreAI Post-Training 团队，近一年主导多模型评测流程与 Benchmark 扩展，建立 Build + Sanity Check 双门禁交付机制；在 AI 前端方向兼具产品交互落地能力与 AI 质量体系建设能力。
-    </div>
+      .timeline-date {
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 9px;
+      }
 
-    <!-- ===== 专业技能 ===== -->
-    <div class="section-title">专业技能</div>
-    <div class="skills-grid">
-      <div class="skill-item"><strong>前端框架：</strong>熟练 React（Fiber 架构 / 性能优化）；熟悉 Vue 全家桶生态，可快速承接或重构 Vue 项目。</div>
-      <div class="skill-item"><strong>小程序开发：</strong>熟练使用 Taro + Tailwind CSS 实现多端适配，掌握小程序全流程开发及性能优化实践。</div>
-      <div class="skill-item"><strong>工程化与构建：</strong>熟练掌握 Webpack / Vite / Rollup 构建优化，了解 Node.js 与 npm / yarn / pnpm；具备低代码平台搭建 H5 页面与动画的可视化开发经验。</div>
-      <div class="skill-item"><strong>自动化测试：</strong>掌握 Cypress 端到端测试及 Jest 单元测试，覆盖核心业务流程。</div>
-      <div class="skill-item"><strong>GraphQL：</strong>熟悉 Apollo + GraphQL 技术栈，参与 Schema 设计及 Fragment 复用优化。</div>
-      <div class="skill-item"><strong>CI/CD：</strong>熟悉 Git Flow 工作流，主导 Code Review 和 CI/CD 自动构建部署流程设计。</div>
-      <div class="skill-item"><strong>AI：</strong>参与 GPT / Claude / Gemini 多模型多维评估，熟悉 Seed Case 分析与 Sub Case 扩展，能够设计评分 Rubric、评测 Prompt 与质量检查 SOP。</div>
-    </div>
+      .timeline-item p {
+        margin-top: 2px;
+        font-size: 10px;
+        line-height: 1.55;
+      }
 
-    <!-- ===== 工作经历与项目经验 ===== -->
-    <div class="section-title">工作经历与项目经验</div>
+      .project-card {
+        padding: 8px 10px;
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--accent);
+        border-radius: 4px;
+        margin-top: 6px;
+      }
 
-    <!-- 公司1 -->
-    <div class="company">
-      <div class="company-header">
-        <span class="company-name">昇迪凡科技术有限公司</span>
-        <span class="company-role">前端工程师</span>
-        <span class="company-period">2024.11 - 至今</span>
-      </div>
+      .project-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 9px;
+      }
 
-      <!-- 项目1-1 -->
-      <div class="project">
-        <div class="project-title">Sales Genie AI 销售助手平台</div>
-        <div class="project-desc">企业级 AI 驱动销售工具，集成 Dify 大语言模型、微软 AAD 认证、实时流式对话，支持多语言/多端/知识库联动。</div>
-        <span class="project-tech">React 18 + Vite 5 + Ant Design X + Axios + i18next</span>
-        <span class="project-period-inline">2025.10 - 2026.03</span>
+      .project-head h3 {
+        color: var(--ink);
+        font-size: 10.5px;
+        font-weight: 750;
+      }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>独立完成从 0 到 1 的前端架构设计与实现，涵盖路由、认证、数据流管理到 UI 层，通过 Context API 实现跨层级状态共享。</li>
-          <li>主导 SSO 登录、流式对话、会话管理、知识库控制等核心功能的需求分析、技术方案设计和代码实现。</li>
-          <li>搭建 dev/test/prod 三环境管理体系，配置 Vite 环境变量、API 代理、请求拦截与错误处理，支持 IIS 部署。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>基于 AbortController 实现 SSE 流式请求中断机制，避免无效数据传输，有效降低服务端资源消耗。</li>
-          <li>设计 Context + Ref 混合状态管理架构，解决流式场景下频繁 re-render 问题，渲染性能显著提升。</li>
-          <li>落地 MSAL 企业 SSO + Crypto Polyfill 完整方案，实现微软 AAD 免密登录全流程。</li>
-          <li>基于 Ant Design X 实现流式对话引擎，优化打字机效果渲染与响应式布局，适配桌面端与移动端。</li>
-        </ul>
-      </div>
+      .project-label {
+        flex: 0 0 auto;
+        color: var(--muted);
+        font-size: 9px;
+      }
 
-      <hr class="divider">
+      .project-subtitle {
+        margin-top: 2px;
+        color: var(--accent-dark);
+        font-size: 9px;
+        font-weight: 600;
+      }
 
-      <!-- 项目1-2 -->
-      <div class="project">
-        <div class="project-title">AI 模型评测与 Benchmark 扩展</div>
-        <div class="project-desc">主导多模型评测框架建设与 Benchmark 案例扩展，覆盖代码生成、对话质量、安全性等五大维度，建立标准化交付验证闭环。</div>
-        <span class="project-tech">Python + Prompt Engineering + Terminal-Bench2 + 模型评测体系</span>
-        <span class="project-period-inline">2025.10 - 至今</span>
+      ul {
+        padding-left: 13px;
+        margin-top: 3px;
+      }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>基于统一 Rubric 完成 GPT / Claude / Gemini 等跨模型对比评测，输出多维度排名报告与优化建议。</li>
-          <li>按 Seed Case 深度分析结果设计同层级 Sub Cases，通过 Build / Sanity Check 双门禁验证有效交付。</li>
-          <li>设计评测 Prompt 与标注规范，提升多轮评估的一致性与可复用性。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>统一评测 Prompt 与评分口径，降低标注波动，多维度评分结果一致性显著提升。</li>
-          <li>参与 Benchmark 扩展实践，深入理解 AI Agent 代码能力的标准化评估方法论。</li>
-          <li>沉淀评测 SOP 与质量门禁清单，支持团队稳定复用与新成员快速接入。</li>
-        </ul>
-      </div>
+      li {
+        padding-left: 1px;
+        margin-top: 1px;
+        font-size: 10px;
+        line-height: 1.52;
+      }
 
-      <hr class="divider">
+      li::marker {
+        color: var(--accent);
+      }
 
-      <!-- 项目1-3 -->
-      <div class="project">
-        <div class="project-title">Expedia Hotels.com（SaaS）</div>
-        <div class="project-desc">Expedia 集团旗下全球酒店预订服务，提升预订流程稳定性、扩展性和国际化能力。</div>
-        <span class="project-tech">React + Apollo + Tailwind + TypeScript + Webpack + CDN</span>
-        <span class="project-period-inline">2024.11 - 2025.09</span>
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 12px;
+        margin-top: 4px;
+        color: var(--accent-dark);
+        font-size: 9px;
+        font-weight: 650;
+      }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>参与酒店预订流程核心功能开发，聚焦表单交互、房型选择、支付跳转等关键路径。</li>
-          <li>参与国际化改造，实现多语言切换、货币本地化、日期格式标准化，满足全球化需求。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>Apollo Fragment 模块化 + Query Batching，首页渲染时间平均下降约 30%。</li>
-          <li>搭建 Cypress 自动化测试体系，覆盖预订核心路径，降低上线回归缺陷率。</li>
-          <li>主导 GraphQL Schema 统一设计，聚合多来源后端数据，提升可维护性。</li>
-        </ul>
-      </div>
-    </div>
+      .detail-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+      }
 
-    <!-- 公司2 -->
-    <div class="company">
-      <div class="company-header">
-        <span class="company-name">深圳市微纪源网络科技有限公司</span>
-        <span class="company-role">前端工程师</span>
-        <span class="company-period">2023.02 - 2024.09</span>
-      </div>
+      .detail-panel {
+        padding: 7px 8px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+      }
 
-      <!-- 项目2-1 -->
-      <div class="project">
-        <div class="project-title">埋点监控 SDK</div>
-        <div class="project-desc">轻量级前端埋点监控上报 SDK，支持 PV/UV 自动收集、JS 错误和性能指标监控。</div>
-        <span class="project-tech">React + TypeScript + Rollup + ES6</span>
-        <span class="project-period-inline">2024.05 - 2024.09</span>
+      .detail-panel h3 {
+        margin-bottom: 3px;
+        color: var(--accent-dark);
+        font-size: 9.5px;
+      }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>设计高度可配置的埋点采集与上报机制，支持 PV、UV、点击、性能、异常等自动与手动采集。</li>
-          <li>制定模块分层规范，将采集层、上报层、配置层解耦为独立模块。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>运行时错误、资源加载失败、Promise 异常等多类错误自动捕获与上报，统一数据结构。</li>
-          <li>Rollup 输出 ESM / CommonJS / UMD 多格式，适配不同运行环境。</li>
-          <li>封装 addReplaceListener 统一替换浏览器原生 API，便于注入埋点逻辑。</li>
-          <li>PerformanceObserver 采集 FCP / LCP / FID / CLS 核心指标，支持旧版浏览器降级。</li>
-        </ul>
-      </div>
+      .detail-panel p {
+        font-size: 9.5px;
+        line-height: 1.55;
+      }
 
-      <hr class="divider">
+      .education {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: baseline;
+        gap: 2px 10px;
+        padding: 7px 8px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+      }
 
-      <!-- 项目2-2 -->
-      <div class="project">
-        <div class="project-title">微课小程序</div>
-        <div class="project-desc">多功能微课小程序，覆盖健身、心理、情商等课程场景的付费学习与直播互动，实现课程售卖、购物车与支付全链路电商闭环。</div>
-        <span class="project-tech">Taro + React + TypeScript + Webpack</span>
-        <span class="project-period-inline">2023.11 - 2024.06</span>
+      .education strong,
+      .education span {
+        font-size: 9px;
+      }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>全流程交付，主导性能优化、核心模块搭建与通用组件封装，推动代码规范与跨端兼容。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>Taro 分包 + 预加载策略，小程序启动耗时优化至 1.1s。</li>
-          <li>SignalR 长连接实时数据同步，支撑直播与课程互动体验。</li>
-          <li>多级缓存架构 + 弱网/断网离线容错，保障核心功能持续可用。</li>
-          <li>封装无感登录 SDK，支持 UnionID 跨平台身份识别与授权。</li>
-          <li>独立开发购物车与支付模块，兼容微信支付/支付宝多平台适配。</li>
-        </ul>
-      </div>
-    </div>
+      .education .edu-date {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        color: var(--muted);
+      }
 
-    <!-- 公司3 -->
-    <div class="company">
-      <div class="company-header">
-        <span class="company-name">深圳亿科数字科技有限公司</span>
-        <span class="company-role">前端工程师</span>
-        <span class="company-period">2020.08 - 2023.02</span>
-      </div>
+      .footer {
+        position: absolute;
+        right: 13mm;
+        bottom: 6mm;
+        left: 13mm;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 4px;
+        border-top: 1px solid var(--line);
+        color: #8494a1;
+        font-size: 7.5px;
+      }
 
-      <!-- 项目3-1 -->
-      <div class="project">
-        <div class="project-title">如意游戏平台</div>
-        <div class="project-desc">海外游戏平台，集成多款热门游戏，提供充值、提现、排行榜、任务系统，面向海外市场的跨终端游戏与电商消费体验。</div>
-        <span class="project-tech">React + Hooks + MobX + Webpack + Tailwind</span>
-        <span class="project-period-inline">2022.05 - 2023.01</span>
+      @media print {
+        html,
+        body {
+          background: #fff;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
 
-        <div class="label">项目职责</div>
-        <ul class="project-list">
-          <li>主导用户中心、虚拟币充值、排行榜等核心模块开发与前端性能优化。</li>
-        </ul>
-        <div class="label">项目亮点</div>
-        <ul class="project-list">
-          <li>Webpack 优化（splitChunks / Tree Shaking / gzip + CDN），打包体积减少 42%，首屏缩短近 2s。</li>
-          <li>SVG + Canvas 高帧率动画模块（requestAnimationFrame），低端设备 55fps+ 渲染。</li>
-          <li>Sentry 异常监控 + WebSocket 实时通信，支撑问题定位与游戏互动体验。</li>
-        </ul>
-      </div>
-    </div>
+        .resume {
+          width: auto;
+          margin: 0;
+        }
 
-    <!-- ===== 教育经历 ===== -->
-    <div class="section-title">教育经历</div>
-    <div class="edu">
-      <span class="edu-school">南昌大学共青学院</span>
-      <span class="edu-major">电子信息工程专业</span>
-      <span class="edu-detail">2016.09 - 2020.07 ｜ 全日制本科</span>
-    </div>
+        .page {
+          min-height: 279mm;
+          padding: 2mm 2mm 10mm;
+          margin: 0;
+          box-shadow: none;
+        }
 
-  </div>
-</body>
+        .page:last-child {
+          break-after: auto;
+          page-break-after: auto;
+        }
+
+        .capability,
+        .timeline-item,
+        .project-card,
+        .detail-panel,
+        .education {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+
+      @media screen and (max-width: 760px) {
+        .resume {
+          width: 100%;
+          margin: 0;
+        }
+
+        .page {
+          min-height: 0;
+          padding: 22px 18px 40px;
+          margin-bottom: 12px;
+        }
+
+        .header {
+          grid-template-columns: 1fr;
+        }
+
+        .contact {
+          justify-items: start;
+          white-space: normal;
+        }
+
+        .capability-grid,
+        .detail-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="resume">
+      <article class="page page-break">
+        <header class="header">
+          <div>
+            <div class="eyebrow">SOFTWARE ENGINEERING · AI · DELIVERY</div>
+            <h1>殷 丹 玲</h1>
+            <div class="headline">
+              软件研发与 AI 工程｜应用开发 · Agent 评测 · 技术交付
+            </div>
+            <div class="header-note">
+              6 年软件工程经验 · 前端研发出身 · 电子信息工程本科 · 深圳
+            </div>
+          </div>
+          <div class="contact">
+            <span>15012870970</span>
+            <span>y370900736@163.com</span>
+            <span>CET-6｜英文技术阅读与工作沟通</span>
+            <a href="https://github.com/yuebanyin/evallens">GitHub｜EvalLens</a>
+            <a href="https://github.com/yuebanyin/engineering-notes"
+              >GitHub｜Engineering Notes</a
+            >
+          </div>
+        </header>
+
+        <section class="summary" aria-label="个人简介">
+          6 年软件研发与交付经验，技术主线为
+          <strong>React / TypeScript</strong>，具备 Node.js、Python、API
+          集成、测试和 CI/CD 实践。曾参与
+          <strong>AI Agent 多模型评测与 Benchmark 工程化</strong
+          >，此前参与企业级 AI 对话平台从 0 到 1 交付，并独立开发开源评测工具
+          EvalLens。能够从工程实现出发理解产品流程、
+          系统依赖与异常边界，将需求拆解为可实现、可验证的任务；持续通过个人项目和技术知识库沉淀经验。
+        </section>
+
+        <div class="proof-points" aria-label="代表性经验">
+          <div class="proof">
+            <div class="proof-value">6 年</div>
+            <div class="proof-label">软件研发与产品交付</div>
+          </div>
+          <div class="proof">
+            <div class="proof-value">5 维</div>
+            <div class="proof-label">Agent 能力评测框架</div>
+          </div>
+          <div class="proof">
+            <div class="proof-value">Build + Sanity</div>
+            <div class="proof-label">Benchmark 双阶段验证</div>
+          </div>
+        </div>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>核心能力</h2>
+            <span class="section-kicker">以项目经历和实际作品为依据</span>
+          </div>
+          <div class="capability-grid">
+            <div class="capability">
+              <h3>软件研发与交付</h3>
+              <p>
+                React / TypeScript 为主，具备企业 Web、SaaS、小程序及 AI
+                对话应用经验； 理解 API、数据流、鉴权、流式交互和多环境部署。
+              </p>
+            </div>
+            <div class="capability">
+              <h3>AI Agent 评测与质量验证</h3>
+              <p>
+                参与 GPT、Claude、Gemini 等模型评测、Rubric 记录、Seed Case
+                分析及 Python + Docker Build / Sanity Check 流程。
+              </p>
+            </div>
+            <div class="capability">
+              <h3>需求拆解与跨团队协作</h3>
+              <p>
+                能从目标梳理用户流程、输入输出、状态、权限、异常分支和验收检查点；
+                有企业项目交付与跨地域团队协作经验。
+              </p>
+            </div>
+            <div class="capability">
+              <h3>技术沉淀与表达</h3>
+              <p>
+                维护个人技术知识库，编写开源项目中英文 README 与架构说明；
+                擅长将技术流程整理为清晰、可复核的内容。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>工作经历</h2>
+            <span class="section-kicker">软件研发 · AI 应用 · Agent 评测</span>
+          </div>
+
+          <section class="company">
+            <div class="company-head">
+              <div class="company-name">昇迪凡科技术有限公司（Centific）</div>
+              <div class="company-role">
+                前端工程师 / AI Agent 评测项目贡献者
+              </div>
+              <div class="company-date">2024.11 – 2026.07</div>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <h3>
+                    Microsoft Core AI Training Team｜Agent 评测与 Benchmark 工程
+                  </h3>
+                  <span class="timeline-date">2025.10 – 2026.07</span>
+                </div>
+                <p>
+                  参与 GPT、Claude、Gemini 等模型评测，围绕 UI、Bug
+                  修复、Feature 实现、文档生成和安全识别等场景整理 Rubric
+                  结果；分析 Seed Case
+                  的目标、知识点、前置条件与预期行为，参与扩展可独立验证的子用例。
+                </p>
+                <p>
+                  参与 Python + Docker Build / Sanity Check
+                  流程，覆盖依赖解析、镜像构建、容器执行和结果验证； 梳理
+                  status、exit code、stdout、stderr、duration、validation result
+                  等结构化字段，支持问题定位与交付复核。 另参与 Terminal-Bench 2
+                  与 IT_Bench 的任务生命周期及验证方式差异分析。
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <h3>Sales Genie｜企业级 AI 销售助手</h3>
+                  <span class="timeline-date">2025.04 – 2025.09</span>
+                </div>
+                <p>
+                  参与 AI 对话平台从 0 到 1 交付，负责 React 前端架构及
+                  Dify、SSE、MSAL 集成；
+                  实现流式对话、中断生成、企业登录和错误提示，支持多环境部署。
+                </p>
+                <p>
+                  使用 AbortController 支持请求中断，并以 Context + Ref
+                  管理流式对话状态，减少高频更新带来的重复渲染。
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-head">
+                  <h3>Expedia Hotels.com｜全球酒店预订平台</h3>
+                  <span class="timeline-date">2024.11 – 2025.03</span>
+                </div>
+                <p>
+                  参与酒店列表与详情页开发、数据预取和 Cypress
+                  核心路径测试；通过 Apollo Fragment 模块化与 Query
+                  Batching，首页渲染时间下降约 30%；参与 SSR / SSG
+                  页面及线上功能迭代。
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <footer class="footer">
+          <span>殷丹玲｜软件研发与 AI 工程</span>
+          <span>01 / 02</span>
+        </footer>
+      </article>
+
+      <article class="page">
+        <header class="section-heading">
+          <h2>工作经历、个人作品与技术基础</h2>
+          <span class="section-kicker">工作项目与个人实践分别呈现</span>
+        </header>
+
+        <section class="company">
+          <div class="company-head">
+            <div class="company-name">深圳市微纪源网络科技有限公司</div>
+            <div class="company-role">前端工程师</div>
+            <div class="company-date">2023.02 – 2024.09</div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <h3>埋点监控 SDK 与微课小程序</h3>
+                <span class="timeline-date"
+                  >TypeScript · Rollup · Taro · SignalR</span
+                >
+              </div>
+              <p>
+                参与 TypeScript 监控 SDK 设计与 Rollup 多格式构建，使用
+                PerformanceObserver 采集 FCP、LCP、FID、CLS
+                并支持旧浏览器降级。交付 Taro 小程序课程、支付和直播互动功能，
+                使用 SignalR 支持实时通信，并通过分包与预加载将启动耗时优化至
+                1.1 秒。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="company">
+          <div class="company-head">
+            <div class="company-name">深圳亿科数字科技有限公司</div>
+            <div class="company-role">前端工程师</div>
+            <div class="company-date">2020.08 – 2023.02</div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-head">
+                <h3>如意游戏平台｜海外 C 端产品</h3>
+                <span class="timeline-date">React · MobX · Webpack</span>
+              </div>
+              <p>
+                参与游戏平台功能研发与性能优化，通过 Webpack 分包、Tree
+                Shaking、gzip 和 CDN 将打包体积降低约 42%、首屏加载缩短近 2
+                秒；参与 WebSocket 实时通信和 Sentry 问题监控。使用 SVG、Canvas
+                和 requestAnimationFrame 实现动画交互。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>个人项目与技术沉淀</h2>
+            <span class="section-kicker"
+              >个人实践，不等同于企业产品任职经历</span
+            >
+          </div>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3>EvalLens｜本地优先的多模型评测工具</h3>
+              <span class="project-label">个人开源项目</span>
+            </div>
+            <div class="project-subtitle">
+              Next.js · TypeScript · OpenAI / Anthropic · Mock
+            </div>
+            <ul>
+              <li>
+                独立开发评测工作流，支持 Case 管理、多 Provider
+                执行、结果对比、Rubric 评分及 Markdown / HTML 报告导出。
+              </li>
+              <li>
+                设计 Build Check 与 Sanity Check：运行前校验
+                Case，运行后检查输出；保留失败结果用于排查，但不纳入评分。
+              </li>
+              <li>
+                编写中英文 README 与英文架构说明，记录快速开始、Demo
+                边界、评测流程和关键设计取舍。
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/yuebanyin/evallens">项目源码</a>
+              <a href="https://evallens.vercel.app/">在线（Mock 模式）</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3>Engineering Notes｜个人技术知识库</h3>
+              <span class="project-label">持续维护</span>
+            </div>
+            <p class="project-subtitle">
+              Markdown · AI / LLM · Agent · React · Node.js
+            </p>
+            <ul>
+              <li>
+                持续整理 LLM 评估、Agent 工具调用与错误处理、React
+                性能优化和测试策略等内容；以问题、约束、决策和验证组织技术笔记。
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/yuebanyin/engineering-notes"
+                >知识库与作品集入口</a
+              >
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>技术栈与协作工具</h2>
+          </div>
+          <div class="detail-grid">
+            <div class="detail-panel">
+              <h3>研发与系统集成</h3>
+              <p>
+                React
+                18｜TypeScript｜JavaScript｜Vue｜Taro｜Node.js｜Python｜REST
+                API｜GraphQL / Apollo｜SSE｜SignalR｜WebSocket
+              </p>
+            </div>
+            <div class="detail-panel">
+              <h3>工程化、测试与 AI</h3>
+              <p>
+                Vite｜Webpack｜Rollup｜Docker｜Azure DevOps｜Git / Git
+                Flow｜Cypress｜Jest｜Dify｜Claude Code｜GitHub Copilot｜Cursor
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>教育经历</h2>
+          </div>
+          <div class="education">
+            <strong>南昌大学共青学院</strong>
+            <span class="edu-date">2016.09 – 2020.07</span>
+            <span>电子信息工程｜全日制本科</span>
+            <span>CET-6｜英文技术阅读、工作沟通与文档编写</span>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>殷丹玲｜15012870970｜y370900736@163.com</span>
+          <span>02 / 02</span>
+        </footer>
+      </article>
+    </main>
+  </body>
 </html>
